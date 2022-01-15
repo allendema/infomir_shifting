@@ -43,6 +43,14 @@
 
 <details>
 
+<details>
+
+ <summary> Create a backup of the file first </summary>
+
+ ```scp /path/to/rdir_backup.sh  root@MAG_IP_ADDRES:/usr/local/share/app/bin/rdir.sh```
+
+</details>
+ 
 <summary> Changing Mac Address, Serial Number, STB Model etc. </summary>
 
 ### Printing current values
@@ -67,4 +75,28 @@
 
 
 
+</details>
+
+ 
+<details>
+
+ <summary> Editing env. variables </summary>
+
+ ### Printing env. varibles
+ ```fw_printenv```
+ 
+ ### Changing env. variables
+ You can change all the variables above  
+ and [more](https://wiki.infomir.eu/eng/set-top-box/for-developers/stb-linux-webkit/customization/most-used-variables)  
+    ```fw_setenv portal2 http://example.org/c```
+ 
+</details>
+
+<details>
+   <summary> Load a portal with different Bootmedia bank </summary>
+
+   ```cd /usr/local/share/app```  
+   ```./run.sh $PORTAL_TO_LOAD "file:///usr/local/share/app/web/system/pages/loader/index.html?bootmedia=bank0"```  
+    Where bootmedia can be ```bank0``` or ```bank1```
+ 
 </details>
