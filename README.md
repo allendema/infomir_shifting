@@ -1,3 +1,10 @@
+### This will demonstrate a few command one can use to change 
+### the behaviour of MAG STBs from Infomir.
+ - https://www.infomir.eu/
+ - https://wiki.infomir.eu/eng/set-top-box/stb-linux-webkit/
+
+
+
 # Getting started
 
 <details>
