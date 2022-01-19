@@ -81,7 +81,16 @@
     - ``` dd if=/dev/$device bs=1 count=32 skip=$(($shft+32)) 2>/dev/null | strings -n1 | awk '{printf ("00:1A:79:00:00:00"); exit;}' ```
 
 
+### Changing STB Model
+ - ```vi /usr/local/share/app/bin/rdir.sh```
+ 
+ - Find ```dd if=/dev/$device bs=1 count=32 skip=$(($shft+96)) 2>/dev/null | strings -n1 | awk '{printf ("%s", $0); exit;}'``` 
+ and edit it to any other Informir device from MAG or Aura series.  
 
+ (AuraHD2 may come with the benifit of the option to install "apps" from Infomir portal ```http://apps.infomir.com.ua/```)
+ 
+ ```dd if=/dev/$device bs=1 count=32 skip=$(($shft+96)) 2>/dev/null | strings -n1 | awk '{printf ("MAG254"); exit;}'``` or
+ ```dd if=/dev/$device bs=1 count=32 skip=$(($shft+96)) 2>/dev/null | strings -n1 | awk '{printf ("AuraHD"); exit;}'```
 </details>
 
  
@@ -105,5 +114,14 @@
    ```cd /usr/local/share/app```  
    ```./run.sh $PORTAL_TO_LOAD "file:///usr/local/share/app/web/system/pages/loader/index.html?bootmedia=bank0"```  
     Where bootmedia can be ```bank0``` or ```bank1```
+ 
+</details>
+
+<details>
+
+ <summary> Owerwriting cookies </summary>
+   Avoid eventual tracking by cookies  
+ 
+    echo "1" > /mnt/Userfs/cookies.ini
  
 </details>
