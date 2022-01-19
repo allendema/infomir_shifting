@@ -125,3 +125,15 @@
     echo "1" > /mnt/Userfs/cookies.ini
  
 </details>
+
+ 
+<details>
+ <summary> Exit Vi </summary>
+
+ To save and exit use  
+    ```:wq```  
+
+ To exit without saving changes use  
+    ```:q!```
+
+</details>
